@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+    <title>PlayFun Tienda de Videojuegos</title>
+
+    {%load static%}
+
+    <!-- Bootstrap core CSS -->
+
+    <link rel="stylesheet" href="{%static 'css/bootstrap.min.css'%}">
+    <link rel="stylesheet" href="{%static 'css/fontawesome.css'%}">
+    <link rel="stylesheet" href="{%static 'css/templatemo-cyborg-gaming.css'%}">
+    <link rel="stylesheet" href="{%static 'css/owl.css'%}">
+    <link rel="stylesheet" href="{%static 'css/animate.css'%}">
+    
+
+    <!-- Additional CSS Files -->
+
+    <link rel="stylesheet"href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
+<!--
+
+TemplateMo 579 Cyborg Gaming
+
+https://templatemo.com/tm-579-cyborg-gaming
+
+-->
+</head>
+
+<body>
+
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <nav class="main-nav">
+                    <!-- ***** Logo Start ***** -->
+                    <a href="index.html" class="logo">
+                        <img src="{% static 'images/PlayFun_transparent.png'%}" alt="">
+                    </a>
+                    <!-- ***** Logo End ***** -->
+                    <!-- ***** Search End ***** -->
+                    <div class="search-input">
+                      <form id="search" action="#">
+                        <input type="text" placeholder="Buscar" id='searchText' name="searchKeyword" onkeypress="handle" />
+                        <i class="fa fa-search"></i>
+                      </form>
+                    </div>
+                    <!-- ***** Search End ***** -->
+                    <!-- ***** Menu Start ***** -->
+                    <ul class="nav">
+                        <li><a href="{% url 'index' %}" class="active">Home</a></li>
+                        <li><a href="{% url 'browse' %}">Navegador</a></li>
+                        <li><a href="{% url 'details' %}">Vision</a></li>
+                        <li><a href="{% url 'streams' %}">Mi Carrito</a></li>
+                        <li><a href="{% url 'profile' %}">Perfil <img src="{% static 'images/profile-header.jpg' %}" alt=""></a></li>
+                    </ul>  
+                    <a class='menu-trigger'>
+                        <span>Menu</span>
+                    </a>
+                    <!-- ***** Menu End ***** -->
+                </nav>
+            </div>
+        </div>
+    </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-12">
+        <div class="page-content">
+
+          <!-- ***** Banner Start ***** -->
+          <div class="main-banner">
+            <div class="row">
+              <div class="col-lg-7">
+                <div class="header-text">
+                  <h6>Bienvenido a PlayFun</h6>
+                  <h4><em>EXPLORA NUESTRA</em> TIENDA DE VIDEOJUEGOS ONLINE</h4>
+                  <div class="main-button">
+                    <a href="browse.html">Navega ahora</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ***** Banner End ***** -->
+
+          <!-- ***** Most Popular Start ***** -->
+          <div class="most-popular">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="heading-section">
+                  <h4><em>Lo mas popular </em> Ahora mismo</h4>
+                </div>
+                <div class="row">
+                  <div class="col-lg-3 col-sm-6">
+                    <div class="item">
+                      <img src="{% static 'images/gtape.jpg'%}" alt="">
+                      <h4>GTAV<br><span>Sandbox</span></h4>
+                      <ul>
+                        <li><i class="fa fa-star"></i> 4.8</li>
+                        <li><i class="fa fa-download"></i> 2.3M</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                    <div class="item">
+                      <img src="{% static 'images/spi2.jpeg'%}" alt="">
+                      <h4>Spiderman 2<br><span>Open-world</span></h4>
+                      <ul>
+                        <li><i class="fa fa-star"></i> 4.8</li>
+                        <li><i class="fa fa-download"></i> 2.3M</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                    <div class="item">
+                      <img src="{% static 'images/red2.jpeg'%}" alt="">
+                      <h4>RDR2<br><span>Aventura</span></h4>
+                      <ul>
+                        <li><i class="fa fa-star"></i> 4.8</li>
+                        <li><i class="fa fa-download"></i> 2.3M</li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="col-lg-3 col-sm-6">
+                    <div class="item">
+                      <img src="{% static 'images/darks.jpg'%}" alt="">
+                      <h4>Dark Souls III<br><span>Souls-Like</span></h4>
+                      <ul>
+                        <li><i class="fa fa-star"></i> 4.8</li>
+                        <li><i class="fa fa-download"></i> 2.3M</li>
+                      </ul>
+                    </div>
+                  </div>
+                  
+                  <div class="col-lg-12">
+                    <div class="main-button">
+                      <a href="browse.html">Descubrir</a>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- ***** Most Popular End ***** -->
+
+          <!-- ***** Gaming Library Start ***** -->
+          <div class="gaming-library">
+            <div class="col-lg-12">
+              <div class="heading-section">
+                <h4><em>Tu libreria</em> de juegos</h4>
+              </div>
+              <div class="item">
+                <ul>
+                  <li><img src="{% static 'images/minecraftpequeno.jpg'%}" alt="" class="templatemo-item"></li>
+                  <li><h4>Minecraft</h4><span>Sandbox</span></li>
+                  <li><h4>Fecha Agregado</h4><span>24/08/2036</span></li>
+                  <li><h4>Horas jugadas</h4><span>634 H 22 Mins</span></li>
+                  <li><h4>Actualmente</h4><span>Downloaded</span></li>
+                  <li><div class="main-border-button border-no-active"><a href="#">Descargado</a></div></li>
+                </ul>
+              </div>
+              <div class="item">
+                <ul>
+                  <li><img src="{% static 'images/cod3pequeno.png'%}" alt="" class="templatemo-item"></li>
+                  <li><h4>COD3</h4><span>FPS</span></li>
+                  <li><h4>Fecha Agregado</h4><span>22/06/2036</span></li>
+                  <li><h4>Horas Jugadas</h4><span>740 H 52 Mins</span></li>
+                  <li><h4>Actualmente</h4><span>Downloaded</span></li>
+                  <li><div class="main-border-button"><a href="#">Descargar</a></div></li>
+                </ul>
+              </div>
+              <div class="item last-item">
+                <ul>
+                  <li><img src="{% static 'images/hollowpequeno.jpg'%}" alt="" class="templatemo-item"></li>
+                  <li><h4>Hollow Knight</h4><span>Plataforma</span></li>
+                  <li><h4>Fecha Agregado</h4><span>21/04/2036</span></li>
+                  <li><h4>Horas Jugadas</h4><span>892 H 14 Mins</span></li>
+                  <li><h4>Actualmente</h4><span>Downloaded</span></li>
+                  <li><div class="main-border-button border-no-active"><a href="#">Descargado</a></div></li>
+                </ul>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="main-button">
+                <a href="profile.html">Ve tu librería</a>
+              </div>
+            </div>
+          </div>
+          <!-- ***** Gaming Library End ***** -->
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  <footer>
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <p>Copyright © 2036 <a href="#">PlayFun Gaming</a> Company. All rights reserved. 
+        
+        </div>
+      </div>
+    </div>
+  </footer>
+
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+  <script src="{%static 'js/bootstrap.min.js'%}" ></script>
+  <script src="{%static 'js/jquery.min.js'%}" ></script>
+  <script src="{%static 'js/isotope.min.js'%}" ></script>
+  <script src="{%static 'js/owl-carousel.js'%}" ></script>
+  <script src="{%static 'js/tabs.js'%}" ></script>
+  <script src="{%static 'js/popup.js'%}" ></script>
+  <script src="{%static 'js/custom.js'%}" ></script>
+
+  </body>
+
+</html>
